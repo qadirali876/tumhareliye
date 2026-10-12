@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Tumhare liye</title>
+<title>Aap ke liye</title>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#24102E;font-family:system-ui,sans-serif}
@@ -50,7 +50,7 @@ body{margin:0;background:#24102E;font-family:system-ui,sans-serif}
 <div class="bars"><i class="on"></i><i></i><i></i><i></i></div>
 
 <div class="st on" id="s0">
-<h3>Tumhare liye kuch hai</h3>
+<h3>Aap ke liye kuch hai</h3>
 <svg class="env" id="env" width="220" height="230" viewBox="0 0 220 230">
 <g class="note"><rect x="30" y="92" width="160" height="100" rx="6" fill="#FFF8F0"/><path d="M110 150c-16-11-16-25-7-25 4 0 7 3 7 6 0-3 3-6 7-6 9 0 9 14-7 25z" fill="#E24B6E"/></g>
 <rect x="10" y="90" width="200" height="130" rx="10" fill="#F4C0D1"/>
@@ -58,17 +58,17 @@ body{margin:0;background:#24102E;font-family:system-ui,sans-serif}
 <path class="flap" d="M10 92L110 165L210 92Z" fill="#D4537E"/>
 <circle cx="110" cy="158" r="15" fill="#E24B6E"/>
 </svg>
-<p class="hint" style="margin-top:18px">Lifafe par tap karo</p>
+<p class="hint" style="margin-top:18px">Lifafe par tap karein</p>
 </div>
 
 <div class="st" id="s1">
 <div class="paper"><p id="type"></p></div>
-<button id="b1">Aage barho</button>
+<button id="b1">Aage barhein</button>
 </div>
 
 <div class="st" id="s2">
-<h3>Yeh dil jor do</h3>
-<p class="hint" id="h2t">Dil par tap karti jao</p>
+<h3>Yeh dil jor dein</h3>
+<p class="hint" id="h2t">Dil par tap karti jayein</p>
 <svg id="hrt" width="200" height="170" viewBox="0 0 200 190" style="cursor:pointer;overflow:visible">
 <g id="hg"><path class="half" id="hl" d="M100 170C20 115 20 40 62 40C82 40 100 58 100 72L88 95L108 115L92 140Z" fill="#E24B6E"/>
 <path class="half" id="hr" d="M100 170L92 140L108 115L88 95L100 72C100 58 118 40 138 40C180 40 180 115 100 170Z" fill="#D4537E"/></g>
@@ -78,14 +78,14 @@ body{margin:0;background:#24102E;font-family:system-ui,sans-serif}
 
 <div class="st" id="s3">
 <div id="ask" style="width:100%">
-<h3>Maaf kar do?</h3>
+<h3>Maaf kar dein?</h3>
 <p>Aik hi jawab sahi hai, waise.</p>
 <div class="arena"><button id="yes">Haan, maaf kiya</button><button id="no">Nahi</button></div>
 </div>
 <div id="done" style="display:none;width:100%;padding-top:30px">
 <svg width="130" height="120" viewBox="0 0 200 190"><path class="whole" d="M100 170C20 115 20 40 62 40C82 40 100 58 100 72C100 58 118 40 138 40C180 40 180 115 100 170Z" fill="#E24B6E"/></svg>
 <h3>Thank you, meri jaan</h3>
-<p>Tumhari muskurahat meri sabse pasandeeda cheez hai. Aaj ki treat meri taraf se.</p>
+<p>Aapki muskurahat meri sabse pasandeeda cheez hai. Aaj ki treat meri taraf se.</p>
 <p>I love you, hamesha.</p>
 </div>
 </div>
@@ -98,16 +98,16 @@ for(var i=0;i<45;i++){var s=document.createElement('div');s.className='star';var
 s.style.cssText='width:'+z+'px;height:'+z+'px;left:'+Math.round(Math.random()*100)+'%;top:'+Math.round(Math.random()*70)+'%;animation-delay:'+(Math.random()*2).toFixed(1)+'s';w.insertBefore(s,w.firstChild);}
 var bars=w.querySelectorAll('.bars i');
 function go(n){for(var k=0;k<4;k++){$('s'+k).classList.toggle('on',k===n);bars[k].classList.toggle('on',k<=n);}}
-var letter='Meri jaan,\n\nMeri galti thi. Mujhe itna zyada gussa nahi karna chahiye tha. Kaan pakar ke sorry.\n\nTum meri zindagi ka sab se khoobsurat hissa ho. Tumhare bina to dil hi nahi lagta. Mera sab kuch to tum hi ho.\n\nSirf tumhara';
+var letter='Meri jaan,\n\nMeri galti thi. Mujhe itna zyada gussa nahi karna chahiye tha. Kaan pakar ke sorry.\n\nAap meri zindagi ka sab se khoobsurat hissa hain. Aapke bina to dil hi nahi lagta. Mera sab kuch to aap hi hain.\n\nSirf aapka';
 var opened=false;
 $('env').addEventListener('click',function(){if(opened)return;opened=true;this.style.animation='none';this.classList.add('open');
 setTimeout(function(){go(1);var t=$('type'),c=0;var iv=setInterval(function(){t.textContent=letter.slice(0,++c);if(c>=letter.length)clearInterval(iv);},28);},1500);});
 $('b1').addEventListener('click',function(){go(2);setHeart();});
-var proms=['Gusse se pehle das tak ginunga','Tumhari baat poori sununga','Awaaz kabhi oonchi nahi karunga','Larai ke baad pehle sorry main bolunga','Tumhe roz hasaunga'],taps=0;
+var proms=['Gusse se pehle das tak ginunga','Aapki baat poori sununga','Awaaz kabhi oonchi nahi karunga','Larai ke baad pehle sorry main bolunga','Aapko roz hasaunga'],taps=0;
 function setHeart(){var g=(5-taps)/5;$('hl').style.transform='translate('+Math.round(-26*g)+'px,0) rotate('+Math.round(-12*g)+'deg)';$('hr').style.transform='translate('+Math.round(26*g)+'px,0) rotate('+Math.round(12*g)+'deg)';}
 $('hrt').addEventListener('click',function(){if(taps>=5)return;var d=document.createElement('div');d.className='prom';d.textContent=proms[taps];$('proms').appendChild(d);taps++;setHeart();
 if(taps===5){$('h2t').textContent='Jur gaya';$('hr').setAttribute('fill','#E24B6E');$('hg').setAttribute('class','whole');setTimeout(function(){go(3)},1800);}});
-var no=$('no'),yes=$('yes'),lines=['Pakka?','Dil phir toot jayega','Soch lo ek baar','Please na','Chocolate bhi launga','Ab to maan jao'],n=0,sc=1;
+var no=$('no'),yes=$('yes'),lines=['Pakka?','Dil phir toot jayega','Soch lein ek baar','Please na','Chocolate bhi launga','Ab to maan jayein'],n=0,sc=1;
 function dodge(e){if(e)e.preventDefault();no.style.left=(22+Math.random()*56)+'%';no.style.top=(70+Math.random()*50)+'px';no.textContent=lines[n%lines.length];n++;sc=Math.min(sc+0.08,1.4);yes.style.transform='translateX(-50%) scale('+sc.toFixed(2)+')';}
 no.addEventListener('mouseenter',dodge);no.addEventListener('touchstart',dodge,{passive:false});no.addEventListener('click',dodge);
 var cols=['#E24B6E','#D4537E','#ED93B1','#FAC775'];
