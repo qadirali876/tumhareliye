@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ur">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tumhare liye</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#24102E;font-family:system-ui,sans-serif}
+.w{position:relative;height:100vh;height:100dvh;min-height:600px;max-width:440px;margin:0 auto;overflow:hidden;background:#24102E;text-align:center;user-select:none;-webkit-user-select:none}
+.w .star{position:absolute;border-radius:50%;background:#FBEAF0;animation:tw 2s ease-in-out infinite}
+.w .hill{position:absolute;left:-20%;width:140%;border-radius:50%}
+.w .bars{position:absolute;top:14px;left:16px;right:16px;display:flex;gap:6px;z-index:3}
+.w .bars i{flex:1;height:3px;border-radius:3px;background:#5A3A66;transition:background .4s}
+.w .bars i.on{background:#F4C0D1}
+.w .st{position:absolute;inset:0;padding:70px 24px 24px;display:none;flex-direction:column;align-items:center;z-index:2;animation:in .6s ease}
+.w .st.on{display:flex}
+.w h3{font-family:'Dancing Script',Georgia,serif;font-size:38px;font-weight:600;color:#FBEAF0;margin:0 0 6px;line-height:1.2}
+.w p{color:#F4C0D1;font-size:16px;line-height:1.7;margin:0 0 10px}
+.w .hint{color:#ED93B1;font-size:14px;animation:pulse 1.6s ease-in-out infinite}
+.w button{border-radius:999px;border:none;background:#E24B6E;color:#fff;padding:12px 26px;font-size:16px;min-height:46px;font-family:inherit;cursor:pointer}
+.w .paper{background:#FFF8F0;border-radius:14px;padding:22px 20px;text-align:left;width:100%;box-sizing:border-box;min-height:250px;transform:rotate(-1.5deg);margin:6px 0 20px}
+.w .paper p{color:#4B1528;font-family:Georgia,serif;font-size:17px;line-height:1.75;margin:0;white-space:pre-wrap}
+.w .env{cursor:pointer;animation:wob 2.4s ease-in-out infinite;margin-top:50px}
+.w .flap{transform-origin:50% 0;transform-box:fill-box;transition:transform .7s}
+.w .note{transition:transform .8s .4s;transform-box:fill-box}
+.w .open .flap{transform:scaleY(-1)}
+.w .open .note{transform:translateY(-70px)}
+.w .half{transition:transform .5s cubic-bezier(.3,1.5,.5,1);transform-box:fill-box;transform-origin:50% 100%}
+.w .whole{animation:beat 1s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.w .prom{background:#3A1848;color:#FBEAF0;border-radius:999px;padding:8px 16px;font-size:14px;margin:4px 0;animation:in .5s ease}
+.w .arena{position:relative;height:170px;width:100%;margin-top:10px}
+.w .arena button{position:absolute;transition:left .25s,top .25s,transform .25s;transform:translateX(-50%)}
+.w #no{background:#3A1848;color:#F4C0D1;left:74%;top:16px}
+.w #yes{left:26%;top:16px}
+.w .fl{position:absolute;bottom:-40px;z-index:1;animation:up 3.6s linear forwards;pointer-events:none}
+@keyframes tw{50%{opacity:.2;transform:scale(.6)}}
+@keyframes in{from{opacity:0;transform:translateY(14px)}}
+@keyframes pulse{50%{opacity:.4}}
+@keyframes wob{25%{transform:rotate(-3deg)}75%{transform:rotate(3deg)}}
+@keyframes beat{50%{transform:scale(1.1)}}
+@keyframes up{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="w" id="w">
+<div class="hill" style="bottom:-150px;height:260px;background:#32143F"></div>
+<div class="hill" style="bottom:-190px;height:260px;background:#3F1B4F;left:10%"></div>
+<div class="bars"><i class="on"></i><i></i><i></i><i></i></div>
+
+<div class="st on" id="s0">
+<h3>Tumhare liye kuch hai</h3>
+<svg class="env" id="env" width="220" height="230" viewBox="0 0 220 230">
+<g class="note"><rect x="30" y="92" width="160" height="100" rx="6" fill="#FFF8F0"/><path d="M110 150c-16-11-16-25-7-25 4 0 7 3 7 6 0-3 3-6 7-6 9 0 9 14-7 25z" fill="#E24B6E"/></g>
+<rect x="10" y="90" width="200" height="130" rx="10" fill="#F4C0D1"/>
+<path d="M10 220L110 150L210 220Z" fill="#ED93B1"/>
+<path class="flap" d="M10 92L110 165L210 92Z" fill="#D4537E"/>
+<circle cx="110" cy="158" r="15" fill="#E24B6E"/>
+</svg>
+<p class="hint" style="margin-top:18px">Lifafe par tap karo</p>
+</div>
+
+<div class="st" id="s1">
+<div class="paper"><p id="type"></p></div>
+<button id="b1">Aage barho</button>
+</div>
+
+<div class="st" id="s2">
+<h3>Yeh dil jor do</h3>
+<p class="hint" id="h2t">Dil par tap karti jao</p>
+<svg id="hrt" width="200" height="170" viewBox="0 0 200 190" style="cursor:pointer;overflow:visible">
+<g id="hg"><path class="half" id="hl" d="M100 170C20 115 20 40 62 40C82 40 100 58 100 72L88 95L108 115L92 140Z" fill="#E24B6E"/>
+<path class="half" id="hr" d="M100 170L92 140L108 115L88 95L100 72C100 58 118 40 138 40C180 40 180 115 100 170Z" fill="#D4537E"/></g>
+</svg>
+<div id="proms" style="display:flex;flex-direction:column;align-items:center;margin-top:6px"></div>
+</div>
+
+<div class="st" id="s3">
+<div id="ask" style="width:100%">
+<h3>Maaf kar do?</h3>
+<p>Aik hi jawab sahi hai, waise.</p>
+<div class="arena"><button id="yes">Haan, maaf kiya</button><button id="no">Nahi</button></div>
+</div>
+<div id="done" style="display:none;width:100%;padding-top:30px">
+<svg width="130" height="120" viewBox="0 0 200 190"><path class="whole" d="M100 170C20 115 20 40 62 40C82 40 100 58 100 72C100 58 118 40 138 40C180 40 180 115 100 170Z" fill="#E24B6E"/></svg>
+<h3>Thank you, meri jaan</h3>
+<p>Tumhari muskurahat meri sabse pasandeeda cheez hai. Aaj ki treat meri taraf se.</p>
+<p>I love you, hamesha.</p>
+</div>
+</div>
+</div>
+
+<script>
+(function(){
+var w=document.getElementById('w'),$=function(i){return document.getElementById(i)};
+for(var i=0;i<45;i++){var s=document.createElement('div');s.className='star';var z=1+Math.round(Math.random()*2);
+s.style.cssText='width:'+z+'px;height:'+z+'px;left:'+Math.round(Math.random()*100)+'%;top:'+Math.round(Math.random()*70)+'%;animation-delay:'+(Math.random()*2).toFixed(1)+'s';w.insertBefore(s,w.firstChild);}
+var bars=w.querySelectorAll('.bars i');
+function go(n){for(var k=0;k<4;k++){$('s'+k).classList.toggle('on',k===n);bars[k].classList.toggle('on',k<=n);}}
+var letter='Meri jaan,\n\nMeri galti thi. Mujhe itna zyada gussa nahi karna chahiye tha. Kaan pakar ke sorry.\n\nTum meri zindagi ka sab se khoobsurat hissa ho. Tumhare bina to dil hi nahi lagta. Mera sab kuch to tum hi ho.\n\nSirf tumhara';
+var opened=false;
+$('env').addEventListener('click',function(){if(opened)return;opened=true;this.style.animation='none';this.classList.add('open');
+setTimeout(function(){go(1);var t=$('type'),c=0;var iv=setInterval(function(){t.textContent=letter.slice(0,++c);if(c>=letter.length)clearInterval(iv);},28);},1500);});
+$('b1').addEventListener('click',function(){go(2);setHeart();});
+var proms=['Gusse se pehle das tak ginunga','Tumhari baat poori sununga','Awaaz kabhi oonchi nahi karunga','Larai ke baad pehle sorry main bolunga','Tumhe roz hasaunga'],taps=0;
+function setHeart(){var g=(5-taps)/5;$('hl').style.transform='translate('+Math.round(-26*g)+'px,0) rotate('+Math.round(-12*g)+'deg)';$('hr').style.transform='translate('+Math.round(26*g)+'px,0) rotate('+Math.round(12*g)+'deg)';}
+$('hrt').addEventListener('click',function(){if(taps>=5)return;var d=document.createElement('div');d.className='prom';d.textContent=proms[taps];$('proms').appendChild(d);taps++;setHeart();
+if(taps===5){$('h2t').textContent='Jur gaya';$('hr').setAttribute('fill','#E24B6E');$('hg').setAttribute('class','whole');setTimeout(function(){go(3)},1800);}});
+var no=$('no'),yes=$('yes'),lines=['Pakka?','Dil phir toot jayega','Soch lo ek baar','Please na','Chocolate bhi launga','Ab to maan jao'],n=0,sc=1;
+function dodge(e){if(e)e.preventDefault();no.style.left=(22+Math.random()*56)+'%';no.style.top=(70+Math.random()*50)+'px';no.textContent=lines[n%lines.length];n++;sc=Math.min(sc+0.08,1.4);yes.style.transform='translateX(-50%) scale('+sc.toFixed(2)+')';}
+no.addEventListener('mouseenter',dodge);no.addEventListener('touchstart',dodge,{passive:false});no.addEventListener('click',dodge);
+var cols=['#E24B6E','#D4537E','#ED93B1','#FAC775'];
+yes.addEventListener('click',function(){$('ask').style.display='none';$('done').style.display='block';
+var c=0,t=setInterval(function(){var h=document.createElement('div');h.className='fl';var z=Math.round(14+Math.random()*26);
+h.innerHTML='<svg width="'+z+'" height="'+z+'" viewBox="0 0 24 24"><path d="M12 21C3 14 3 5 8 5c2 0 4 2 4 4 0-2 2-4 4-4 5 0 5 9-4 16z" fill="'+cols[c%4]+'"/></svg>';
+h.style.left=Math.round(Math.random()*90)+'%';w.appendChild(h);setTimeout(function(){h.remove()},3600);if(++c>60)clearInterval(t);},110);});
+})();
+</script>
+</body>
+</html>
