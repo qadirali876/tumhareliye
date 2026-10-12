@@ -103,7 +103,7 @@ var opened=false;
 $('env').addEventListener('click',function(){if(opened)return;opened=true;this.style.animation='none';this.classList.add('open');
 setTimeout(function(){go(1);var t=$('type'),c=0;var iv=setInterval(function(){t.textContent=letter.slice(0,++c);if(c>=letter.length)clearInterval(iv);},28);},1500);});
 $('b1').addEventListener('click',function(){go(2);setHeart();});
-var proms=['Gusse se pehle das tak ginunga','Aapki baat poori sununga','Awaaz kabhi oonchi nahi karunga','Larai ke baad pehle sorry main bolunga','Aapko roz hasaunga'],taps=0;
+var proms=['Ainda kabhi bhi gussa nahi karunga, pakka wada','Aapki baat poori sununga','Awaaz kabhi oonchi nahi karunga','Larai ke baad pehle sorry main bolunga','Aapko roz hasaunga'],taps=0;
 function setHeart(){var g=(5-taps)/5;$('hl').style.transform='translate('+Math.round(-26*g)+'px,0) rotate('+Math.round(-12*g)+'deg)';$('hr').style.transform='translate('+Math.round(26*g)+'px,0) rotate('+Math.round(12*g)+'deg)';}
 $('hrt').addEventListener('click',function(){if(taps>=5)return;var d=document.createElement('div');d.className='prom';d.textContent=proms[taps];$('proms').appendChild(d);taps++;setHeart();
 if(taps===5){$('h2t').textContent='Jur gaya';$('hr').setAttribute('fill','#E24B6E');$('hg').setAttribute('class','whole');setTimeout(function(){go(3)},1800);}});
